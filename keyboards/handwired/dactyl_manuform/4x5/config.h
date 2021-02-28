@@ -26,6 +26,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define MANUFACTURER    tshort
 
+#define EE_HANDS
+
+// https://github.com/qmk/qmk_firmware/issues/9697#issuecomment-658242578
+#define USE_SERIAL
+#define MASTER_RIGHT
+
+#define SOFT_SERIAL_PIN D0
+
+// From https://www.reddit.com/r/olkb/comments/c0006h/dactylmanuform_wlets_split_firmware_slave_side/erb2y5l/
+#define SPLIT_USB_DETECT
+#define SPLIT_USB_TIMEOUT 2500
+
 /* key matrix size */
 // Rows are doubled-up
 #define MATRIX_ROWS 10
@@ -35,6 +47,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROW_PINS { F7, B1, B3, B2, B6 }
 // #define MATRIX_COL_PINS { B5, B4, E6, D7, C6 }
 #define MATRIX_COL_PINS { C6, D7, E6, B4, B5 }
+#define MATRIX_COL_PINS_RIGHT { D4, D7, E6, B4, B5 }
 
 #define DIODE_DIRECTION COL2ROW
 
